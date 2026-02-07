@@ -1,0 +1,48 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Users collection
+    match /users/{userId} {
+      // Users can read their own profile
+      allow read: if request.auth != null && request.auth.uid == userId;
+      
+      // Users can create their own profile
+      allow create: if request.auth != null && request.auth.uid == userId;
+      
+      // Users can update specific fields only (not blacklist status)
+      allow update: if request.auth != null 
+                    && request.auth.uid == userId
+                    && !("isBlacklisted" in request.resource.data.diff(resource.data).affectedKeys())
+                    && !("blacklistedUntil" in request.resource.data.diff(resource.data).affectedKeys());
+    }
+    
+    // Chat messages collection
+    match /ego_chat_messages/{messageId} {
+      // Anyone authenticated can read messages
+      allow read: if request.auth != null;
+      
+      // Premium users can write messages (check is done in app, but add basic auth here)
+      allow create: if request.auth != null
+                    && request.resource.data.userId == request.auth.uid
+                    && request.resource.data.message.size() <= 500
+                    && !request.resource.data.keys().hasAny(['isModerated', 'moderationReason']);
+      
+      // Users cannot update or delete messages (only Cloud Functions can)
+      allow update, delete: if false;
+    }
+    
+    // Stripe payments collection (if needed)
+    match /stripe_customers/{customerId} {
+      allow read: if request.auth != null && request.auth.uid == customerId;
+      allow write: if false; // Only Cloud Functions should write
+    }
+    
+    // Premium purchases
+    match /premium_purchases/{purchaseId} {
+      allow read: if request.auth != null 
+                  && resource.data.userId == request.auth.uid;
+      allow write: if false; // Only Cloud Functions should write
+    }
+  }
+}
