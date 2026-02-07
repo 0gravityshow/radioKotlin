@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "639766577034",
+    "project_id": "kinetic-galaxy",
+    "storage_bucket": "kinetic-galaxy.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639766577034:android:4317a809e8526ccd4a1273",
+        "android_client_info": {
+          "package_name": "com.killedbythegalaxy.radiokotlin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZR4J9ybD1HUZL0oYMjGg0L2hELWeb-aU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
