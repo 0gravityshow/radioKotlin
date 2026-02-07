@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Galaxy Radio</string>
+    
+    <!-- Player -->
+    <string name="station_name">Killed by the Galaxy Radio</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="connecting">Connecting…</string>
+    <string name="buffering">Buffering…</string>
+    <string name="live">LIVE</string>
+    <string name="listeners">%d listeners</string>
+    
+    <!-- Controls -->
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
+    <string name="volume">Volume</string>
+    
+    <!-- Chat -->
+    <string name="ego_chat">Ego Chat</string>
+    <string name="unlock_chat">Unlock Ego Chat</string>
+    <string name="chat_price">$1.99</string>
+    <string name="type_message">Type a message…</string>
+    <string name="send">Send</string>
+    <string name="mention_egobot">Mention @egobot for a cosmic response!</string>
+    
+    <!-- Paywall -->
+    <string name="paywall_title">Unlock Ego Chat</string>
+    <string name="paywall_description">Join the galactic conversation! Chat with fellow travelers across the cosmos.</string>
+    <string name="paywall_feature_1">Real-time chat with listeners</string>
+    <string name="paywall_feature_2">Talk to @egobot (Hitchhiker\'s Guide style)</string>
+    <string name="paywall_feature_3">Lifetime access - pay once</string>
+    <string name="paywall_feature_4">Don\'t Panic!</string>
+    <string name="secure_payment">Secure payment via Stripe</string>
+    
+    <!-- Errors -->
+    <string name="error_connection">Unable to connect. Please check your internet connection.</string>
+    <string name="error_stream">Stream unavailable. Retrying…</string>
+    <string name="error_chat">Failed to send message. Please try again.</string>
+    <string name="error_payment">Payment failed. Please try again.</string>
+    
+    <!-- Black Hole (Ban) -->
+    <string name="black_hole_title">Event Horizon</string>
+    <string name="black_hole_message">You have crossed into the Black Hole. Your messages have been silenced.</string>
+    
+    <!-- EgoBot -->
+    <string name="egobot_thinking">EgoBot is consulting the Guide…</string>
+</resources>
