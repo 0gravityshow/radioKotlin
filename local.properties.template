@@ -1,0 +1,9 @@
+# Local configuration - DO NOT COMMIT actual local.properties!
+# Copy this to local.properties and fill in your SDK path
+
+# Android SDK path (example for different OS)
+# Windows: sdk.dir=C\:\\Users\\YourUser\\AppData\\Local\\Android\\Sdk
+# Mac: sdk.dir=/Users/YourUser/Library/Android/sdk
+# Linux: sdk.dir=/home/youruser/Android/Sdk
+
+sdk.dir=/path/to/your/android/sdk
