@@ -1,0 +1,15 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "ego_chat_messages",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "timestamp",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}
